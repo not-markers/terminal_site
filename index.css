@@ -1,24 +1,25 @@
 /* CSS styles in this file */
+
 *
 {
-    font-family: digifont, monospace, serif;
-    font-variant: all-small-caps; 
+    font-family: digifont, monospace, serif; 
 }
 
 body
 {
-	background-color: #3399ff;
+	background-color: #004080;
 }
 
 #console
 {
 	font-family: digifont, courier, monospace;
+    font-variant: all-small-caps;
 	color: #fff;
 	width:750px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:100px;
-	font-size:14px;
+	font-size:20px;
 }
 
 a
@@ -27,24 +28,24 @@ a
 	text-decoration: none;
 }
 
-#a
+#color_a
 {
 	color: #0f0;
 }
-
-#c
-{
-	color: #0bc;
-}
-
-#b
+#color_b
 {
 	color: #ff0096;
 }
 
-#k
+#color_c
 {
-    	animation: change 1s;
+	color: #0bc;
+}
+
+
+#quote
+{
+    animation: change 1s;
 }
 
 #op
@@ -58,5 +59,3 @@ a
     	50% { color:  #0f0; }
     	99% { color: black; }
 }
-
-

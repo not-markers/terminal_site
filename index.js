@@ -1,22 +1,22 @@
 /* JavaScript in this file */
 
-var Typer =
+var typer =
 {
 	text: null,
-	access_count_timer:null,
-	index:0, 
-	speed:2,
-	file:"", 
-	access_count:0,
-	deniedCount:0, 
+	access_count_timer: null,
+	index: 0, 
+	speed: 3,
+	file: "", 
+	access_count: 0,
+	deniedCount: 0, 
 
 	init: function()
     {
-		access_count_timer=setInterval(function(){Typer.updLstChr();},500); 
-		$.get(Typer.file,function(data)
+		access_count_timer=setInterval(function(){typer.updLstChr();},500); 
+		$.get(typer.file,function(data)
         {
-			Typer.text=data;
-			Typer.text = Typer.text.slice(0, Typer.text.length-1);
+			typer.text=data;
+			typer.text = typer.text.slice(0, typer.text.length-1);
 		});
 	},
  
@@ -36,46 +36,47 @@ var Typer =
 		
 		if(key.keyCode==18)
         {
-			Typer.access_count++; 
+			typer.access_count++; 
 			
-			if(Typer.access_count>=3)
+			if(typer.access_count>=3)
             {
-				Typer.makeAccess(); 
+				typer.makeAccess(); 
 			}
 		}
 		
     		else if(key.keyCode==20)
             {
-			Typer.deniedCount++; 
+			typer.deniedCount++; 
 			
-			if(Typer.deniedCount>=3)
+			if(typer.deniedCount>=3)
             {
-				Typer.makeDenied(); 
+				typer.makeDenied(); 
 			}
 		}
 		
     		else if(key.keyCode==27)
             { 
-			Typer.hidepop(); 
+			typer.hidepop(); 
 		}
 		
-    		else if(Typer.text)
+    		else if(typer.text)
             { 
-			    var cont=Typer.content(); 
-			    if(cont.substring(cont.length-1,cont.length)=="|") 
+			    var cont = typer.content(); 
+			    if(cont.substring(cont.length-1, cont.length) == "|") 
 				    $("#console").html($("#console").html().substring(0,cont.length-1)); 
-			    if(key.keyCode!=8){ 
-				    Typer.index+=Typer.speed;	
+			    if(key.keyCode != 8){ 
+				    typer.index += typer.speed;	
 			}
       		else
             {
-                if(Typer.index>0) 
-                    Typer.index-=Typer.speed;
+                if(typer.index > 0) 
+                    typer.index -= typer.speed;
 			}
-			var text=Typer.text.substring(0,Typer.index)
-			var rtn= new RegExp("\n", "g"); 
+
+			var text = typer.text.substring(0, typer.index)
+			var rtrn = new RegExp("\n", "g"); 
 	
-			$("#console").html(text.replace(rtn,"<br/>"));
+			$("#console").html(text.replace(rtrn,"<br/>"));
 			window.scrollBy(0,50); 
 		}
 		
@@ -98,11 +99,11 @@ var Typer =
 			$("#console").html($("#console").html().substring(0,cont.length-1)); 
 		
 		else
-			this.write("|"); // else write it
+			this.write("|");
 	}
 }
 
-function replaceUrls(text)
+function replace_urls(text)
 {
 	var http  = text.indexOf("http://");
 	var space = text.indexOf(".me ", http);
@@ -120,17 +121,17 @@ function replaceUrls(text)
 	}
 }
 
-Typer.speed=3;
-Typer.file="landers.txt";
-Typer.init();
+typer.speed=4;
+typer.file="landers.txt";
+typer.init();
  
 var timer = setInterval("t();", 30);
 
 function t()
 {
-	Typer.addText({"keyCode": 123748});
+	typer.addText({"keyCode": 123748});
 	
-	if (Typer.index > Typer.text.length)
+	if (typer.index > typer.text.length)
     {
 		clearInterval(timer);
 	}
