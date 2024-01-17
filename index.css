@@ -28,22 +28,22 @@ a
 	text-decoration: none;
 }
 
-#color_a
+#a
 {
 	color: #0f0;
 }
-#color_b
+#b
 {
 	color: #ff0096;
 }
 
-#color_c
+#c
 {
 	color: #0bc;
 }
 
 
-#quote
+#k
 {
     animation: change 1s;
 }
