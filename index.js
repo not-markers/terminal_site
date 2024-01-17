@@ -121,7 +121,7 @@ function replace_urls(text)
 	}
 }
 
-Typer.speed=4;
+Typer.speed=2;
 Typer.file="landers.txt";
 Typer.init();
  
@@ -135,4 +135,11 @@ function t()
     {
 		clearInterval(timer);
 	}
+}
+
+document.onkeydown = function (e) {
+    if (e.keyCode == 27) 
+    { 
+        Typer.index = Typer.text.length;
+    }
 }
