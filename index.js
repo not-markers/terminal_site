@@ -103,7 +103,7 @@ var Typer =
 	}
 }
 
-function replace_urls(text)
+function replaceUrls(text)
 {
 	var http  = text.indexOf("http://");
 	var space = text.indexOf(".me ", http);
