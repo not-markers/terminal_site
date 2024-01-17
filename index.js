@@ -1,6 +1,6 @@
 /* JavaScript in this file */
 
-var typer =
+var Typer =
 {
 	text: null,
 	access_count_timer: null,
@@ -12,11 +12,11 @@ var typer =
 
 	init: function()
     {
-		access_count_timer=setInterval(function(){typer.updLstChr();},500); 
-		$.get(typer.file,function(data)
+		access_count_timer=setInterval(function(){Typer.updLstChr();},500); 
+		$.get(Typer.file,function(data)
         {
-			typer.text=data;
-			typer.text = typer.text.slice(0, typer.text.length-1);
+			Typer.text=data;
+			Typer.text = Typer.text.slice(0, Typer.text.length-1);
 		});
 	},
  
@@ -36,44 +36,44 @@ var typer =
 		
 		if(key.keyCode==18)
         {
-			typer.access_count++; 
+			Typer.access_count++; 
 			
-			if(typer.access_count>=3)
+			if(Typer.access_count>=3)
             {
-				typer.makeAccess(); 
+				Typer.makeAccess(); 
 			}
 		}
 		
     		else if(key.keyCode==20)
             {
-			typer.deniedCount++; 
+			Typer.deniedCount++; 
 			
-			if(typer.deniedCount>=3)
+			if(Typer.deniedCount>=3)
             {
-				typer.makeDenied(); 
+				Typer.makeDenied(); 
 			}
 		}
 		
     		else if(key.keyCode==27)
             { 
-			typer.hidepop(); 
+			Typer.hidepop(); 
 		}
 		
-    		else if(typer.text)
+    		else if(Typer.text)
             { 
-			    var cont = typer.content(); 
+			    var cont = Typer.content(); 
 			    if(cont.substring(cont.length-1, cont.length) == "|") 
 				    $("#console").html($("#console").html().substring(0,cont.length-1)); 
 			    if(key.keyCode != 8){ 
-				    typer.index += typer.speed;	
+				    Typer.index += Typer.speed;	
 			}
       		else
             {
-                if(typer.index > 0) 
-                    typer.index -= typer.speed;
+                if(Typer.index > 0) 
+                    Typer.index -= Typer.speed;
 			}
 
-			var text = typer.text.substring(0, typer.index)
+			var text = Typer.text.substring(0, Typer.index)
 			var rtrn = new RegExp("\n", "g"); 
 	
 			$("#console").html(text.replace(rtrn,"<br/>"));
@@ -121,17 +121,17 @@ function replace_urls(text)
 	}
 }
 
-typer.speed=4;
-typer.file="landers.txt";
-typer.init();
+Typer.speed=4;
+Typer.file="landers.txt";
+Typer.init();
  
 var timer = setInterval("t();", 30);
 
 function t()
 {
-	typer.addText({"keyCode": 123748});
+	Typer.addText({"keyCode": 123748});
 	
-	if (typer.index > typer.text.length)
+	if (Typer.index > Typer.text.length)
     {
 		clearInterval(timer);
 	}
