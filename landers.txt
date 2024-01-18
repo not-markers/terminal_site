@@ -1,13 +1,13 @@
 <span id="a">tim@landers</span>:<span id="b">~</span><span id="c">$</span> cd landofnoise/<!-- kjsdfhkjdhsfkjdshfkj -->about_me
 <span id="a">tim@landers</span>:<span id="b">~</span><span id="c">$</span> cat <!-- kjsdfhkjdhsfkjdshfkj -->landers.txt<br/><br/>
-encouragement, "<span id="k">hang in ther</span>". <!-- sjkfhskjf -->
+good thing to remember, "<span id="k">hang in ther</span>". <!-- sjkfhskjf -->
 
-Hey There! This is the portflio website in the skin of a terminal.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>You can see that, this is how your portfolio would look like.</p>
+hello! this is a portfolio<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p> i hope you enjoy</p>
 <p>my name is tim landers and I do stuff sometimes.</p> <!-- ksjdokhdfgdufdfkjhfkjahdfkjhafkjhakf -->
-<p> You can also tell what you've worked and known and what skills you have, you can also give link to your professional portfolio here<a href="link"> portfolio</a>.</p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
+<p> i have a job as a hardware tecnician at pensacola christian college <a href="link"> portfolio</a>.</p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
 <p>more about myself. <br><br><br>my projects <a href="link"> projects</a>.</p><!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
 <p> other professional profiles i have: <br> <a href="link1">Profile</a> <br> <a href="link2">Profile</a> and <br> <a href="link3">Profile</a>.</p>
 
-my email<!-- slightdelayhere-->, please feel free to send me an email at<!-- longlonglongcomment --><a href="coding.with.marker@gmail.com">coding.with.marker@gmail.com</a>.
+my email<!-- slightdelayhere-->, please feel free to send me an email at<!-- longlonglongcomment --><a href="coding.with.markers@gmail.com">coding.with.markers@gmail.com</a>.
 
 <p>eof</p>
